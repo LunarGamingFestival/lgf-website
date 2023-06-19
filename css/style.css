@@ -84,13 +84,25 @@
 	top:0;
 }
 
-.banner-container{
-	display: flex;
-	justify-content: flex-start;
-	margin-bottom:auto;
-
+#banner-section{
+	background-image: url(../img/lan/lan-1.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
+.moonbeam-logo{
+  position: absolute;
+  top: 7vh;
+  right: 1vw;
+ 
+}
+
+.moonbeam-logo img{
+	width:30vw;
+	height: auto;
+}
 
 
 /** Mobile menu **/
@@ -173,8 +185,13 @@
 
 .ri
 {
-  padding-top:50px;
+  color:white;
+  padding-top:10px;
+  padding-bottom: 20px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -469,6 +486,13 @@
 }
 
 /** General table **/
+
+.fixed-table{
+	display:grid;
+	grid-template-columns: 1fr 2fr;
+	width: 100%;
+	padding-left: 1vw;
+}
 
 .table{
 	display:grid;

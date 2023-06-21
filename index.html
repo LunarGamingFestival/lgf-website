@@ -266,7 +266,7 @@
 
 
 		//rotate homepage images
-		var imageUrls=[
+		var desktopImgUrls=[
 			'img/lan/lan-1.jpg',
 			'img/lan/lan-2.jpg',
 			'img/lan/lan-3.jpg',
@@ -288,7 +288,31 @@
 			'img/lan/lan-19.jpg',
 			'img/lan/lan-20.jpg',
 		]
+		
+		var mobileImgUrls=[
+			'img/mobile/mobile-lan/mobile-lan-01.jpg',
+			'img/mobile/mobile-lan/mobile-lan-02.jpg',
+			'img/mobile/mobile-lan/mobile-lan-03.jpg',
+			'img/mobile/mobile-lan/mobile-lan-04.jpg',
+			'img/mobile/mobile-lan/mobile-lan-05.jpg',
+			'img/mobile/mobile-lan/mobile-lan-06.jpg',
+			'img/mobile/mobile-lan/mobile-lan-07.jpg',
+			'img/mobile/mobile-lan/mobile-lan-08.jpg',
+			'img/mobile/mobile-lan/mobile-lan-09.jpg',
+			'img/mobile/mobile-lan/mobile-lan-10.jpg',
+			'img/mobile/mobile-lan/mobile-lan-11.jpg',
+			'img/mobile/mobile-lan/mobile-lan-12.jpg',
+			'img/mobile/mobile-lan/mobile-lan-13.jpg',
+			'img/mobile/mobile-lan/mobile-lan-14.jpg',
+			'img/mobile/mobile-lan/mobile-lan-15.jpg',
+			'img/mobile/mobile-lan/mobile-lan-16.jpg',
+			'img/mobile/mobile-lan/mobile-lan-17.jpg',
+			'img/mobile/mobile-lan/mobile-lan-18.jpg',
+			'img/mobile/mobile-lan/mobile-lan-19.jpg',
+			'img/mobile/mobile-lan/mobile-lan-20.jpg',
+		]
 
+		var imageUrls=document.documentElement.clientWidth < 768 ? mobileImgUrls : desktopImgUrls;
 		var sectionElement= document.getElementById('banner-section');
 
 		// Function to change the image randomly
@@ -298,8 +322,23 @@
 		sectionElement.style.backgroundImage=imageUrl;
 		}
 
+		function handleResize(){
+			if(document.documentElement.clientWidth < 768 && imageUrls!==mobileImgUrls){
+				imageUrls=mobileImgUrls;
+				changeImage();
+			}
+			else if(document.documentElement.clientWidth >= 768 && imageUrls!== desktopImgUrls){
+				imageUrls=desktopImgUrls;
+				changeImage();
+			}
+
+		}
+
 		// Set an interval to change the image every 10 seconds
 		setInterval(changeImage, 5000);
+
+		//responsive switch to mobile/desktop based on screenwidth
+		window.addEventListener('resize', handleResize);
 
 
 		new fullpage('#fullpage', {

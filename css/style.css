@@ -536,6 +536,16 @@
 	}
 }
 
+.indent-list{
+	padding-left: 2vw;
+}
+
+@media (max-width:760px){
+	.indent-list{
+		padding-left: 5vw;
+	}
+}
+
 /** Specific tables **/
 
 .event-table {

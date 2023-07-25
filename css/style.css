@@ -237,12 +237,45 @@
 	color: #53CBC8;
 }
 
+.green{
+	color: #2BB95D;
+}
 .darkmode{
 	color: #fff
 }
 
 .lightmode{
 	color: #000
+}
+.cta{
+	font-size: 2vw;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+@media (max-width:760px){
+	.cta{
+		font-size: 4vw;
+	}
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-larger{
+	font-size: 1.5vw;
+}
+
+@media (max-width:760px){
+	.text-larger{
+		font-size: 3vw;
+	}
+}
+
+.emphasis-light{
+	font-weight: 500;
+	text-transform: uppercase;
 }
 
 .emphasis{
@@ -468,6 +501,8 @@
 .container{
 	display: flex;
 	flex-direction: row;
+	justify-content: center; 
+	align-items: center;
 	width:75%;
 	margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.5);
@@ -532,9 +567,24 @@
 
 @media (max-width:760px){
 	.table-cell{
+		display: block;
 		padding-bottom: 20px;
 	}
 }
+
+/* Add space around links in normal desktop view */
+.table-cell a.links {
+	padding: 0px 5px;
+	border-radius: 8px;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 760px) {
+	.table-cell {
+	  display: block;
+	  padding-bottom: 20px;
+	}
+  }
 
 .indent-list{
 	padding-left: 2vw;
@@ -548,23 +598,43 @@
 
 /** Specific tables **/
 
+.home-table{
+	padding-top: 3vh;
+	width:70%;
+	grid-template-columns: 1fr 1fr!important;
+	display: flex; /* Added to center the content horizontally */
+	justify-content: center; /* Added to center the content horizontally */
+	margin-bottom: 5vh;
+}
+
+@media (max-width:760px){
+	.home-table{
+		grid-template-columns: 1fr!important;
+	}
+}
+
+
+.home-cell{
+	display: flex;
+	align-items: center;
+	flex-basis: 100%;
+}
+
+/* Set a fixed width for the image and add margin between text and image */
+.home-cell img {
+	max-height: 15vh; 
+	max-width: 15vw;
+	margin-left: 5vw; /* Adjust this value to increase/decrease the spacing */
+  }
+
 .event-table {
 	padding-bottom: 1vw;
   }
 
 .play-table{
-	grid-template-columns: 1fr 1fr!important;
+	grid-template-columns: 1fr!important;
 }
 
-@media (max-width:760px){
-	.play-table{
-		grid-template-columns: 1fr!important;
-	}
-}
-
-.play-table .table-cell:last-child{
-	text-align: center;
-}
 
 @media (max-width:760px){
 	.container-game{

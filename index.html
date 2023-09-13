@@ -36,7 +36,15 @@
 					<h1 class="text-center">Welcome to the Lunar Gaming Festival!</h2>
 				
 						<p class="cta text-center">
-							<a href="https://apps.moonbeam.network/moonbeam/staking" class="links" target="_blank">STAKE</a> - <a href="https://app.fidi.tech/giveaway/greatescape82023" class="links blue" target="_blank">CLAIM</a> -<a href="https://game.glmrjungle.com/ " class="links green" target="_blank">PLAY</a>
+							<a href="https://apps.moonbeam.network/moonbeam/staking" class="links" target="_blank">
+								<img id="stakeBtn" src="img/buttons/stakebtn.png" class="cta-button" />
+							</a>
+							<a href="https://app.fidi.tech/giveaway/greatescape82023" class="links blue" target="_blank">
+								<img id="claimBtn" src="img/buttons/claimbtn.png" class="cta-button"/>
+							</a>
+							<a href="https://game.glmrjungle.com/" class="links green" target="_blank">
+								<img id="playBtn" src="img/buttons/playbtn.png" class="cta-button"/>
+							</a>
 						</p>
 						<p class="text-center text-larger">
 							Get better APY (8%-12%) with Community Collators
@@ -67,18 +75,36 @@
 						<div class="table-cell text-center">
 							<h1>HOW TO PLAY</h1>
 						</div>
-						<div class="table-cell">
-							<a href="https://apps.moonbeam.network/moonbeam/staking" class="links emphasis" target="_blank">stake</a>&nbsp; with one of the participating<a href="#collators" class="links emphasis" >collators</a> by the <strong>end of each month</strong>
+						<div class="play-action">
+							<div class="table-cell play-cell">
+								<a href="https://apps.moonbeam.network/moonbeam/staking" class="links" target="_blank">
+									<img id="playStakeBtn" src="img/buttons/stakebtn.png" class="play-button"/>
+								</a>
+								<div class="play-text">with one of the participating</div>
+								<a href="#collators" class="links" target="_blank">
+									<img id="playCollatorBtn" src="img/buttons/collatorsbtn.png" class="play-button" />
+								</a>
+								<div class="play-text">by the <strong>end of each month</strong></div>
+							</div>
+							<div class="line"></div>
+							<div class="table-cell play-cell">
+								<a href="https://app.fidi.tech/giveaway/greatescape82023" class="links blue" target="_blank">
+									<img id="playClaimBtn" src="img/buttons/claimbtn.png" class="play-button"/>
+								</a>
+								<div class="play-text">your NFT on FiDi.Tech</div>
+							</div>
+							<div class="line"></div>
+							<div class="table-cell play-cell">
+								<a href="https://game.glmrjungle.com/" class="links green" target="_blank">
+									<img id="playPlayBtn" src="img/buttons/playbtn.png" class="play-button"/>
+								</a>
+								<div class="play-text">the game of the month</div>
+							</div>
 						</div>
-								
-						<div class="table-cell">
-							<a href="https://app.fidi.tech/giveaway/greatescape82023" class="links blue emphasis" target="_blank">CLAIM</a>&nbsp your NFT on FiDi.Tech
-						</div>
-						<div class="table-cell">
-							<a href="https://game.glmrjungle.com/ " class="links green emphasis" target="_blank">PLAY</a> the game of the month
-						</div>
-						<div class="table-cell" style="padding-left:5px;">
-							Join the <a href="https://t.me/+9gW_CjlqqVNlMTNh" class="links emphasis blue" target="_blank">Telegram</a>	
+						<div class="table-cell tg-cell">
+							<a href="https://t.me/+9gW_CjlqqVNlMTNh" class="links emphasis blue" target="_blank">
+								<img id="playTelegramBtn" src="img/buttons/telegrambtn.png" class="tg-button"/>
+							</a>	
 						</div>
 					</div>
 				</div>
@@ -399,7 +425,55 @@
 			$('meta[name=viewport]').attr('content', 'width=device-width, minimum-scale='+ scale.toFixed(2) +', maximum-scale='+ scale.toFixed(2) +', user-scalable=yes'); // 
 
 		});
-		});								
+		});			
+		
+		
+		//button hover-over
+		const stakeBtn = document.getElementById('stakeBtn');
+		const claimBtn = document.getElementById('claimBtn');
+		const playBtn = document.getElementById('playBtn');
+
+		function handleHover(element, overImageSrc) {
+			const originalSrc = element.src;
+
+			element.addEventListener('mouseenter', () => {
+				element.src = overImageSrc;
+			});
+
+			element.addEventListener('mouseleave', () => {
+				element.src = originalSrc;
+			});
+		}
+
+		handleHover(stakeBtn, 'img/buttons/stakebtn_over.png'); 
+		handleHover(claimBtn, 'img/buttons/claimbtn_over.png'); 
+		handleHover(playBtn, 'img/buttons/playbtn_over.png');   
+
+
+		//button hover-over
+		const playStakeBtn = document.getElementById('playStakeBtn');
+		const playCollatorBtn = document.getElementById('playCollatorBtn');
+		const playClaimBtn = document.getElementById('playClaimBtn');
+		const playPlayBtn = document.getElementById('playPlayBtn');
+		const playTelegramBtn = document.getElementById('playTelegramBtn');
+
+		function handleHover(element, overImageSrc) {
+			const originalSrc = element.src;
+
+			element.addEventListener('mouseenter', () => {
+				element.src = overImageSrc;
+			});
+
+			element.addEventListener('mouseleave', () => {
+				element.src = originalSrc;
+			});
+		}
+
+		handleHover(playStakeBtn, 'img/buttons/stakebtn_over.png'); 
+		handleHover(playCollatorBtn, 'img/buttons/collatorsbtn_over.png'); 
+		handleHover(playClaimBtn, 'img/buttons/claimbtn_over.png'); 
+		handleHover(playPlayBtn, 'img/buttons/playbtn_over.png');   
+		handleHover(playTelegramBtn, 'img/buttons/telegrambtn_over.png');   
 	</script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-E36TN1W9MX"></script>

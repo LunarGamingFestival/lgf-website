@@ -240,6 +240,24 @@
 .green{
 	color: #2BB95D;
 }
+
+.stake-color{
+	color:#e1147b;
+}
+
+.claim-color{
+	color: #53CBC8;
+}
+
+.play-color{
+	color: #2BB95D;
+}
+
+.win-color{
+	color: #ECB32C;
+}
+
+
 .darkmode{
 	color: #fff
 }
@@ -428,6 +446,26 @@
 		background-size: cover;
 	}
 }
+
+#win-section{
+	background-image: url(../img/bgs/prizepool_bg6.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+@media (max-width:760px){
+	#win-section{
+		background-image: url(../img/mobile/prizepool_bg1.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
 
 #faq1-slide{
 	background-image: url(../img/bgs/faq_1.jpg);
@@ -644,6 +682,15 @@
 .play-table{
 	grid-template-columns: 1fr!important;
 }
+
+.win-table{
+	grid-template-columns: 1fr, 3fr!important;
+	display: flex;
+	padding-bottom: 1vw;
+}
+
+
+
 
 .play-action{
 	display: flex;

@@ -106,14 +106,20 @@
   position: absolute;
   top: 7vh;
   right: 1vw;
- 
 }
 
 .moonbeam-logo img{
-	width:30vw;
-	height: auto;
+	width:auto;
+	height: 8vh;
 }
 
+/** Mobile menu **/
+@media screen and (max-width:760px) {
+	.moonbeam-logo img{
+		width:30vw;
+		height: auto;
+	}
+}
 
 /** Mobile menu **/
 @media screen and (max-width:760px) {
@@ -331,7 +337,7 @@
 
 /** Section art **/
 
-#events-section{
+#current-event-slide{
 	background-image: url(../img/bgs/events_1.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -340,8 +346,26 @@
 }
 
 @media (max-width:760px){
-	#events-section{
+	#current-event-slide{
 		background-image: url(../img/mobile/event_mobile_bg_1.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
+#next-event-slide{
+	background-image: url(../img/bgs/events_2.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media (max-width:760px){
+	#next-event-slide{
+		background-image: url(../img/mobile/event_mobile_bg_2.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
@@ -396,6 +420,24 @@
 @media (max-width:760px){
 	#evrloot-slide{
 		background-image: url(../img/mobile/evrloot_bg1.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
+#moonfit-slide{
+	background-image: url(../img/bgs/moonfit_bg1.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media (max-width:760px){
+	#moonfit-slide{
+		background-image: url(../img/mobile/moonfit_mobile_bg1.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
@@ -648,11 +690,11 @@
 
 .home-table{
 	padding-top: 3vh;
-	width:70%;
+	width:85%;
 	grid-template-columns: 1fr 1fr!important;
 	display: flex; /* Added to center the content horizontally */
 	justify-content: center; /* Added to center the content horizontally */
-	margin-bottom: 5vh;
+	margin-bottom: 2vh;
 }
 
 @media (max-width:760px){
@@ -661,17 +703,29 @@
 	}
 }
 
+.home-column{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+	align-items: baseline;
+}
+
 
 .home-cell{
 	display: flex;
-	align-items: center;
-	flex-basis: 100%;
+	align-items: baseline;
+	justify-content: space-around;
+	padding-top: .2vh;
+	padding-bottom: .2vh;
+	
+	
 }
 
 /* Set a fixed width for the image and add margin between text and image */
 .home-cell img {
-	max-height: 15vh; 
-	max-width: 15vw;
+	max-height: 18vh; 
+	max-width: 18vw;
 	margin-left: 5vw; /* Adjust this value to increase/decrease the spacing */
   }
 

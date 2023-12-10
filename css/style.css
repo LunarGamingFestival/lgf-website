@@ -207,12 +207,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  text-align: center;
+  text-align: end;
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media (max-width:760px){
+	.ri{
+		display:none;
+	}
 }
 
 /** Text styles **/
@@ -438,6 +443,24 @@
 @media (max-width:760px){
 	#moonfit-slide{
 		background-image: url(../img/mobile/moonfit_mobile_bg1.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
+#zoombies-slide{
+	background-image: url(../img/bgs/zoombies_bg1.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media (max-width:760px){
+	#zoombies-slide{
+		background-image: url(../img/mobile/zoombies_mobile_bg1.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;

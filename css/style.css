@@ -468,6 +468,25 @@
 	}
 }
 
+
+#dps-slide{
+	background-image: url(../img/bgs/dps_bg3.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media (max-width:760px){
+	#dps-slide{
+		background-image: url(../img/mobile/dps_mobile_bg1.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
 #mystery-slide{
 	background-image: url(../img/bgs/mystery_bg2.jpg);
 	background-repeat: no-repeat;

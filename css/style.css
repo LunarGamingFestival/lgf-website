@@ -343,7 +343,7 @@
 /** Section art **/
 
 #current-event-slide{
-	background-image: url(../img/bgs/events_1.jpg);
+	background-image: url(../img/bgs/pink_bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -352,7 +352,7 @@
 
 @media (max-width:760px){
 	#current-event-slide{
-		background-image: url(../img/mobile/event_mobile_bg_1.jpg);
+		background-image: url(../img/mobile/pink_mobile_bg.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
@@ -543,6 +543,24 @@
 @media (max-width:760px){
 	#win-section{
 		background-image: url(../img/mobile/prizepool_bg1.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
+#faq-pink-slide{
+	background-image: url(../img/bgs/faq_pink.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media (max-width:760px){
+	#faq-pink-slide{
+		background-image: url(../img/mobile/faq_mobile_pink.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;

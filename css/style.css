@@ -512,6 +512,24 @@
 	}
 }
 
+#polybots-slide{
+	background-image: url(../img/bgs/polyrobots_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media (max-width:760px){
+	#polybots-slide{
+		background-image: url(../img/bgs/mobile/polybots_mobile_bg.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
 #zoombies-slide{
 	background-image: url(../img/bgs/zoombies_bg1.jpg);
 	background-repeat: no-repeat;

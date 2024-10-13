@@ -603,6 +603,24 @@
 	}
 }
 
+#voidge-slide{
+	background-image: url(../img/bgs/voidge_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media (max-width:760px){
+	#voidge-slide{
+		background-image: url(../img/bgs/mobile/voidge_mobile_bg.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
 
 #mystery-slide{
 	background-image: url(../img/bgs/mystery_bg2.jpg);
